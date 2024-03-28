@@ -2,21 +2,18 @@ export default async function handler(request, response) {
     console.log('🚀 ~ handler= ~ request:', request.query);
     let data;
     if (request?.query?.taxonomy) {
-        const res = await fetch(`https://api.contentstack.io/v3/taxonomies/${request?.query?.taxonomy}/terms`, {
+        const res = await fetch(`https://api.contentstack.io/v3/taxonomies/${request?.query?.taxonomy}/terms?depth=3`, {
             method: "GET",
             headers: {
               "api_key": "blt7193dffbafc4e975",
               "authorization": "cs3f96691f3caab263b532d92e",
               "Content-Type": "application/json",
             },
-            params: {
-                depth: 3,
-            }
         })
         data = await res.json()
         console.log('🚀 ~ handler ~ data:', data);
     } else {
-        const res = await fetch(`https://cdn.contentstack.io/v3/taxonomies/entries?environment=production&query={"taxonomies.courses":{"$in":["ai"]}}`, {
+        const res = await fetch(`https://cdn.contentstack.io/v3/taxonomies/entries?environment=production&query={"taxonomies.courses":{"$in":["${request?.query?.term_uid}"]}}`, {
               method: "GET",
               headers: {
                 "api_key": "blt7193dffbafc4e975",
