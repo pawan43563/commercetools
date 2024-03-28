@@ -25,7 +25,7 @@ export default async function handler(request, response) {
               },
               params: {
                 environment: "production",
-                query: `{"taxonomies.courses" : { "$in" : [${request?.query?.term_uid}] }}`,
+                query: `{"taxonomies.courses" : { "$in" : ["${request?.query?.term_uid}"] }}`,
               }
             })
         data = await res.json()
