@@ -26,7 +26,7 @@ export default function BlogPost({ entry }: Prop) {
     try {
       const entryUrl = blogId ? `/blog/${blogId}` : "/";
       const terms = await getEntriesByTerm(blogId);
-      setTerms(terms?.entries);
+      setTerms(terms?.body?.entries);
       console.log('🚀 ~ fetchData ~ terms:', terms);
       const banner = await getPageRes("/blog");
       // const post = await getBlogPostRes(entryUrl);

@@ -27,7 +27,7 @@ export default function Blog({ entry }: Prop) {
 
       const terms = await getTerms("courses");
       console.log('🚀 ~ fetchData ~ terms:', terms);
-      setTerms(terms?.terms);
+      setTerms(terms?.body?.terms);
       const blog = await getPageRes("/blog");
       const result = await getBlogListRes();
       (!blog || !result) && setError(true);
