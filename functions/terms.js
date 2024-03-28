@@ -1,4 +1,4 @@
-export default handler = async  (request, response) => {
+export default async function handler(){
     console.log('🚀 ~ handler= ~ request:', request.query);
     const res = await fetch(`https://api.contentstack.io/v3/taxonomies/${request?.query?.term_uid}/terms`, {
         method: "GET",
