@@ -17,7 +17,7 @@ export default async function handler(request, response) {
               method: "GET",
               headers: {
                 "api_key": "blt7193dffbafc4e975",
-                "authorization": "cs3f96691f3caab263b532d92e",
+                "access_token": "cs411caf677ab7241f52b4fcc3",
                 "Content-Type": "application/json",
               },
               params: {
