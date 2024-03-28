@@ -141,166 +141,166 @@ export default {
   getTerms: async (term_uid: string) => {
     console.log('🚀 ~ term_uid:', Stack);
     return new Promise((resolve, reject) => {
-      // fetch(`https://commercetools.contentstackapps.com/terms?term_uid=${term_uid}`, {
-      //   method: "GET",
-      // })
-      // .then((response) => resolve(response.json()))
-      // .catch((error) => reject(error));
-       resolve({
-        "terms": [
-            {
-                "uid": "sports",
-                "name": "Sports",
-                "parent_uid": null,
-                "depth": 1,
-                "created_at": "2024-03-27T18:31:10.073Z",
-                "created_by": "bltd3e314b8626ecf71",
-                "updated_at": "2024-03-27T18:31:10.073Z",
-                "updated_by": "bltd3e314b8626ecf71",
-                "taxonomy_uid": "courses",
-                "ancestors": [
-                    {
-                        "uid": "courses",
-                        "name": "Courses",
-                        "type": "TAXONOMY"
-                    }
-                ]
-            },
-            {
-                "uid": "information_technology",
-                "name": "Information Technology",
-                "parent_uid": null,
-                "depth": 1,
-                "created_at": "2024-03-27T18:30:53.038Z",
-                "created_by": "bltd3e314b8626ecf71",
-                "updated_at": "2024-03-27T18:30:53.038Z",
-                "updated_by": "bltd3e314b8626ecf71",
-                "taxonomy_uid": "courses",
-                "ancestors": [
-                    {
-                        "uid": "courses",
-                        "name": "Courses",
-                        "type": "TAXONOMY"
-                    }
-                ]
-            },
-            {
-                "uid": "ai",
-                "name": "AI",
-                "parent_uid": "information_technology",
-                "depth": 2,
-                "created_at": "2024-03-27T18:31:42.236Z",
-                "created_by": "bltd3e314b8626ecf71",
-                "updated_at": "2024-03-27T18:32:58.525Z",
-                "updated_by": "bltd3e314b8626ecf71",
-                "taxonomy_uid": "courses",
-                "ancestors": [
-                    {
-                        "uid": "courses",
-                        "name": "Courses",
-                        "type": "TAXONOMY"
-                    },
-                    {
-                        "uid": "information_technology",
-                        "uuid": "660465ddfb52c7a8788b08c9",
-                        "name": "Information Technology"
-                    }
-                ]
-            },
-            {
-                "uid": "football",
-                "name": "Football",
-                "parent_uid": "sports",
-                "depth": 2,
-                "created_at": "2024-03-27T18:32:00.045Z",
-                "created_by": "bltd3e314b8626ecf71",
-                "updated_at": "2024-03-27T18:32:00.045Z",
-                "updated_by": "bltd3e314b8626ecf71",
-                "taxonomy_uid": "courses",
-                "ancestors": [
-                    {
-                        "uid": "courses",
-                        "name": "Courses",
-                        "type": "TAXONOMY"
-                    },
-                    {
-                        "uid": "sports",
-                        "name": "Sports",
-                        "uuid": "660465ee51f698bd47a07265"
-                    }
-                ]
-            },
-            {
-                "uid": "cricket",
-                "name": "Cricket",
-                "parent_uid": "sports",
-                "depth": 2,
-                "created_at": "2024-03-27T18:31:48.231Z",
-                "created_by": "bltd3e314b8626ecf71",
-                "updated_at": "2024-03-27T18:31:48.231Z",
-                "updated_by": "bltd3e314b8626ecf71",
-                "taxonomy_uid": "courses",
-                "ancestors": [
-                    {
-                        "uid": "courses",
-                        "name": "Courses",
-                        "type": "TAXONOMY"
-                    },
-                    {
-                        "uid": "sports",
-                        "name": "Sports",
-                        "uuid": "660465ee51f698bd47a07265"
-                    }
-                ]
-            },
-            {
-                "uid": "coding",
-                "name": "Coding",
-                "parent_uid": "information_technology",
-                "depth": 2,
-                "created_at": "2024-03-27T18:31:35.450Z",
-                "created_by": "bltd3e314b8626ecf71",
-                "updated_at": "2024-03-27T18:31:35.450Z",
-                "updated_by": "bltd3e314b8626ecf71",
-                "taxonomy_uid": "courses",
-                "ancestors": [
-                    {
-                        "uid": "courses",
-                        "name": "Courses",
-                        "type": "TAXONOMY"
-                    },
-                    {
-                        "uid": "information_technology",
-                        "name": "Information Technology",
-                        "uuid": "660465ddfb52c7a8788b08c9"
-                    }
-                ]
-            },
-            {
-                "uid": "architecture",
-                "name": "Architecture",
-                "parent_uid": "information_technology",
-                "depth": 2,
-                "created_at": "2024-03-27T18:31:22.527Z",
-                "created_by": "bltd3e314b8626ecf71",
-                "updated_at": "2024-03-27T18:31:22.527Z",
-                "updated_by": "bltd3e314b8626ecf71",
-                "taxonomy_uid": "courses",
-                "ancestors": [
-                    {
-                        "uid": "courses",
-                        "name": "Courses",
-                        "type": "TAXONOMY"
-                    },
-                    {
-                        "uid": "information_technology",
-                        "name": "Information Technology",
-                        "uuid": "660465ddfb52c7a8788b08c9"
-                    }
-                ]
-            }
-        ]
-    })
+      fetch(`https://commercetools.contentstackapps.com/terms?term_uid=${term_uid}`, {
+        method: "GET",
+      })
+      .then((response) => resolve(response.json()))
+      .catch((error) => reject(error));
+    //    resolve({
+    //     "terms": [
+    //         {
+    //             "uid": "sports",
+    //             "name": "Sports",
+    //             "parent_uid": null,
+    //             "depth": 1,
+    //             "created_at": "2024-03-27T18:31:10.073Z",
+    //             "created_by": "bltd3e314b8626ecf71",
+    //             "updated_at": "2024-03-27T18:31:10.073Z",
+    //             "updated_by": "bltd3e314b8626ecf71",
+    //             "taxonomy_uid": "courses",
+    //             "ancestors": [
+    //                 {
+    //                     "uid": "courses",
+    //                     "name": "Courses",
+    //                     "type": "TAXONOMY"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             "uid": "information_technology",
+    //             "name": "Information Technology",
+    //             "parent_uid": null,
+    //             "depth": 1,
+    //             "created_at": "2024-03-27T18:30:53.038Z",
+    //             "created_by": "bltd3e314b8626ecf71",
+    //             "updated_at": "2024-03-27T18:30:53.038Z",
+    //             "updated_by": "bltd3e314b8626ecf71",
+    //             "taxonomy_uid": "courses",
+    //             "ancestors": [
+    //                 {
+    //                     "uid": "courses",
+    //                     "name": "Courses",
+    //                     "type": "TAXONOMY"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             "uid": "ai",
+    //             "name": "AI",
+    //             "parent_uid": "information_technology",
+    //             "depth": 2,
+    //             "created_at": "2024-03-27T18:31:42.236Z",
+    //             "created_by": "bltd3e314b8626ecf71",
+    //             "updated_at": "2024-03-27T18:32:58.525Z",
+    //             "updated_by": "bltd3e314b8626ecf71",
+    //             "taxonomy_uid": "courses",
+    //             "ancestors": [
+    //                 {
+    //                     "uid": "courses",
+    //                     "name": "Courses",
+    //                     "type": "TAXONOMY"
+    //                 },
+    //                 {
+    //                     "uid": "information_technology",
+    //                     "uuid": "660465ddfb52c7a8788b08c9",
+    //                     "name": "Information Technology"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             "uid": "football",
+    //             "name": "Football",
+    //             "parent_uid": "sports",
+    //             "depth": 2,
+    //             "created_at": "2024-03-27T18:32:00.045Z",
+    //             "created_by": "bltd3e314b8626ecf71",
+    //             "updated_at": "2024-03-27T18:32:00.045Z",
+    //             "updated_by": "bltd3e314b8626ecf71",
+    //             "taxonomy_uid": "courses",
+    //             "ancestors": [
+    //                 {
+    //                     "uid": "courses",
+    //                     "name": "Courses",
+    //                     "type": "TAXONOMY"
+    //                 },
+    //                 {
+    //                     "uid": "sports",
+    //                     "name": "Sports",
+    //                     "uuid": "660465ee51f698bd47a07265"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             "uid": "cricket",
+    //             "name": "Cricket",
+    //             "parent_uid": "sports",
+    //             "depth": 2,
+    //             "created_at": "2024-03-27T18:31:48.231Z",
+    //             "created_by": "bltd3e314b8626ecf71",
+    //             "updated_at": "2024-03-27T18:31:48.231Z",
+    //             "updated_by": "bltd3e314b8626ecf71",
+    //             "taxonomy_uid": "courses",
+    //             "ancestors": [
+    //                 {
+    //                     "uid": "courses",
+    //                     "name": "Courses",
+    //                     "type": "TAXONOMY"
+    //                 },
+    //                 {
+    //                     "uid": "sports",
+    //                     "name": "Sports",
+    //                     "uuid": "660465ee51f698bd47a07265"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             "uid": "coding",
+    //             "name": "Coding",
+    //             "parent_uid": "information_technology",
+    //             "depth": 2,
+    //             "created_at": "2024-03-27T18:31:35.450Z",
+    //             "created_by": "bltd3e314b8626ecf71",
+    //             "updated_at": "2024-03-27T18:31:35.450Z",
+    //             "updated_by": "bltd3e314b8626ecf71",
+    //             "taxonomy_uid": "courses",
+    //             "ancestors": [
+    //                 {
+    //                     "uid": "courses",
+    //                     "name": "Courses",
+    //                     "type": "TAXONOMY"
+    //                 },
+    //                 {
+    //                     "uid": "information_technology",
+    //                     "name": "Information Technology",
+    //                     "uuid": "660465ddfb52c7a8788b08c9"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             "uid": "architecture",
+    //             "name": "Architecture",
+    //             "parent_uid": "information_technology",
+    //             "depth": 2,
+    //             "created_at": "2024-03-27T18:31:22.527Z",
+    //             "created_by": "bltd3e314b8626ecf71",
+    //             "updated_at": "2024-03-27T18:31:22.527Z",
+    //             "updated_by": "bltd3e314b8626ecf71",
+    //             "taxonomy_uid": "courses",
+    //             "ancestors": [
+    //                 {
+    //                     "uid": "courses",
+    //                     "name": "Courses",
+    //                     "type": "TAXONOMY"
+    //                 },
+    //                 {
+    //                     "uid": "information_technology",
+    //                     "name": "Information Technology",
+    //                     "uuid": "660465ddfb52c7a8788b08c9"
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // })
     });
   },
 
