@@ -8,6 +8,9 @@ export default async function handler(request, response) {
               "api_key": "blt7193dffbafc4e975",
               "authorization": "cs3f96691f3caab263b532d92e",
               "Content-Type": "application/json",
+            },
+            params: {
+                depth: 3,
             }
         })
         data = await res.json()
