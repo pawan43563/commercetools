@@ -4,14 +4,16 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { LivePreviewProvider } from "./context/live-preview-context-provider";
 import reportWebVitals from "./reportWebVitals";
+import { createRoot } from "react-dom/client";
 
-ReactDOM.render(
-  <BrowserRouter>
+const root = createRoot(document.getElementById("root") as HTMLElement);
+
+root.render(
+      <BrowserRouter>
     <LivePreviewProvider>
       <App />
     </LivePreviewProvider>
-  </BrowserRouter>,
-  document.getElementById("root")
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
