@@ -23,10 +23,6 @@ export default async function handler(request, response) {
                 "access_token": "cs411caf677ab7241f52b4fcc3",
                 "Content-Type": "application/json",
               },
-              params: {
-                environment: "production",
-                query: `{"taxonomies.courses" : { "$in" : ["${request?.query?.term_uid}"] }}`,
-              }
             })
         data = await res.json()
         console.log('🚀 ~ handler ~ data:', data);
