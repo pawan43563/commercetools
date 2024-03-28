@@ -143,6 +143,9 @@ export default {
     return new Promise((resolve, reject) => {
       fetch(`https://commercetools.contentstackapps.com/terms?term_uid=${term_uid}`, {
         method: "GET",
+        headers: {
+          'Content-Type': 'application/json',
+        }
       })
       .then((response) => resolve(response.json()))
       .catch((error) => reject(error));
