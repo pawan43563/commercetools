@@ -16,7 +16,7 @@ export default async function handler(request, response) {
         data = await res.json()
         console.log('🚀 ~ handler ~ data:', data);
     } else {
-        const res = await fetch(`https://cdn.contentstack.io/v3/taxonomies/entries`, {
+        const res = await fetch(`https://cdn.contentstack.io/v3/taxonomies/entries?environment=production&query={"taxonomies.courses":{"$in":["${request?.query?.term_uid}"]}}`, {
               method: "GET",
               headers: {
                 "api_key": "blt7193dffbafc4e975",
@@ -25,7 +25,7 @@ export default async function handler(request, response) {
               },
               params: {
                 environment: "production",
-                query: `{"taxonomies.courses" : { "$in" : ["ai"] }}`,
+                query: `{"taxonomies.courses" : { "$in" : ["${request?.query?.term_uid}"] }}`,
               }
             })
         data = await res.json()
