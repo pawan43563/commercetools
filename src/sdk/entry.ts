@@ -141,7 +141,7 @@ export default {
   getTerms: async (term_uid: string) => {
     console.log('🚀 ~ term_uid:', Stack);
     return new Promise((resolve, reject) => {
-      fetch(`/terms`, {
+      fetch(`https://commercetools.contentstackapps.com/terms?term_uid=${term_uid}`, {
         method: "GET",
       })
       .then((response) => resolve(response.json()))
